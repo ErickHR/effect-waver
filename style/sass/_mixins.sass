@@ -1,0 +1,13 @@
+@use 'extends'
+
+@mixin footer__wave( $animation_name : null, $pseudo_element : false, $time_animation : 4s, $opacity : null )
+    @if( $pseudo_element )
+        content: ''
+        position: absolute
+        opacity: $opacity
+        width: 100%
+    @else
+        position: relative
+
+    @extend %footer__wave
+    animation: $animation_name $time_animation linear infinite

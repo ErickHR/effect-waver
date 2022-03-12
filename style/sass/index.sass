@@ -1,0 +1,28 @@
+@use "_mixins.sass"
+
+@import "keyframes"
+
+
+*, *::before, *::after
+    margin: 0
+    padding: 0
+
+html, body
+    height: 100%
+
+.section
+    height: calc( 100% - 200px )
+
+.footer__wave-img--one
+   @include mixins.footer__wave( animation_wave_one )
+
+.footer__wave-img--one::before
+   @include mixins.footer__wave( animation_wave_two, true, 4s, .8 )
+
+.footer__wave-img--one::after
+   @include mixins.footer__wave( animation_wave_three, true, 1.5s, .6 )
+
+.footer-information
+    height: 100px
+    background-color: #3586FF
+

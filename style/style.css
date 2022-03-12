@@ -1,0 +1,71 @@
+.footer__wave-img--one, .footer__wave-img--one::before, .footer__wave-img--one::after {
+  background-image: url(../img/wave.png);
+  background-size: 1000px 100px;
+  height: 100px;
+  background-position-x: 1000px;
+}
+
+@keyframes animation_wave_one {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animation_wave_two {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+@keyframes animation_wave_three {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.section {
+  height: calc(100% - 200px);
+}
+
+.footer__wave-img--one {
+  position: relative;
+  animation: animation_wave_one 4s linear infinite;
+}
+
+.footer__wave-img--one::before {
+  content: "";
+  position: absolute;
+  opacity: 0.8;
+  width: 100%;
+  animation: animation_wave_two 4s linear infinite;
+}
+
+.footer__wave-img--one::after {
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+  width: 100%;
+  animation: animation_wave_three 1.5s linear infinite;
+}
+
+.footer-information {
+  height: 100px;
+  background-color: #3586FF;
+}
+
+/*# sourceMappingURL=style.css.map */

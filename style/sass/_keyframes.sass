@@ -1,0 +1,12 @@
+
+@mixin animation_wave( $name, $x-start, $x-end )
+    @keyframes animation_wave_#{$name}
+        0%
+            background-position-x: $x-start
+        100%
+            background-position-x: $x-end
+
+
+@include animation_wave( one, 0, 1000px )
+@include animation_wave( two, 0, -1000px )
+@include animation_wave( three, 0, -1000px )
